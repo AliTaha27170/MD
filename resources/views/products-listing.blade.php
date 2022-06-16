@@ -1,6 +1,5 @@
 @extends('app')
 @section("main")
-
 <table>
     <h2 class="table-title">Dried - Bulk</h2>
     <thead>

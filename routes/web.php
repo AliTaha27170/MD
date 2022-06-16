@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+use App\Product;
+use App\Category;
+use App\Brand;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/index', function () {
-    return view('index');
-});
+Route::get('/', [PageController::class , 'index'] );
 
 
-Route::get('/food-products', function () {
-    return view('foods');
-});
+Route::get('/food-products/{ItemCategoryName}', [PageController::class , "products"])->name("food");
 
 Route::get('/cookbooks', function () {
     return view('cookbooks');
@@ -42,3 +38,23 @@ Route::get('/contact-us', function () {
     return view('contact');
 });
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
+Route::get("test",function(){
+
+
+    $products = Product::get();
+
+    foreach ($products as $product) {
+        $product->update([
+            "ItemImage"  => "products/".$product['ItemID']."-L.jpg"
+        ]);
+        # code...
+    }
+
+
+});

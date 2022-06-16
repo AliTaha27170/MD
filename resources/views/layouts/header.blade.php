@@ -22,8 +22,8 @@
 
     <div class="header-2">
         <nav class="my-navbar">
-            <a href="/index">Home</a>
-            <a href="/food-products">Food Products</a>
+            <a href="../../../../">Home</a>
+            <a href="{{route('food',$category->id)}}">Food Products</a>
             <a href="/cookbooks">Cookbooks</a>
             <a href="/products-listing">Products Listing</a>
         </nav>
