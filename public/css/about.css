@@ -1,0 +1,17 @@
+.about-header h2{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.2rem;
+    font-weight: 500;
+    }
+    .about-header h2 span{
+        font-weight: 600;
+        color: var(--main-color);
+    }
+    .about-header h2 span span{
+        color: var(--second-color);
+    }
+    .about-p p{
+        font-size: 1.5rem;
+        line-height: 2;
+    }

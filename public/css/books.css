@@ -1,0 +1,173 @@
+.books{
+    padding: 0 2%;
+}
+.books .books-area{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.total-books{
+    position: relative;
+    width: 100%;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+.total-books span{
+    background-color: #fff;
+    margin-bottom: 0;
+    color: var(--main-color);
+    display: inline-block;
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+.total-books span::after{
+    position: absolute;
+    bottom: 12px;
+    width: 90%;
+    right: 5%;
+    height: 1px;
+    content: '';
+    background-color: #e7e7e7;
+    z-index: -1;
+}
+.book-card{
+    margin: 0px 10px 15px;
+    width: 615px;
+    height: 385px;
+    border: 1px solid silver;
+    border-radius: var(--border-radius);
+    box-shadow: rgb(0 0 0 / 16%) 0 5px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.book-card:hover{
+    transform: scale(1.03);
+}
+.book-card .image-section, .book-card .info-section{
+    width: 50%;
+}
+.book-card .image-section{
+    display: flex;
+}
+.book-card .image-section img{
+    width: 100%;
+    height: 100%;
+}
+.book-card .info-section{
+    padding: 0 10px;
+}
+.book-card .info-section .book-title{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--second-color);
+}
+.book-card .info-section .author{
+    margin: 20px 0;
+    text-align: center;
+}
+.book-card .info-section .author .author-name{
+    font-style: italic;
+    border-top : 1px solid var(--main-color) ;
+    border-bottom : 1px solid var(--main-color) ;
+    padding: 4px 0;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.book-card .info-section .description p{
+    font-size: 1rem;
+}
+.book-card .info-section .card-footer{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.book-card .info-section .card-footer span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.book-card .info-section .card-footer .language{
+    font-weight: 400;
+    color: var(--black);
+}
+.book-card .info-section .card-footer .book-item{
+    font-size: 1.2rem;
+    color: var(--second-color);
+}
+
+.book-card .info-section .add-to-cart{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+}
+.book-card .info-section .add-to-cart button{
+    background-color: var(--main-color);
+    margin-top: 1rem;
+    font-size: 1.4rem;
+
+}
+.book-card .info-section .add-to-cart button:hover{
+    background-color: var(--second-color);
+}
+.book-card .info-section .add-to-cart .quantity span{
+    color: var(--black);
+}
+.book-card .info-section .add-to-cart .quantity input{
+    text-align: center;
+    border: 1px solid silver;
+    border-radius: var(--border-radius);
+    width: 40px;
+    height: 40px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+@media (max-width:767px) {
+    .books .books-area{
+        margin-top : 60px ;
+    }
+    .book-card{
+        flex-direction: column;
+        height: auto;
+        margin: 15px;
+    }
+    .book-card .image-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .book-card .image-section img{
+        border-radius: var(--border-radius);
+        width: 65%;
+        padding: 15px 0 0 0;
+    }
+    .book-card .image-section, .book-card .info-section{
+        width: 100%;
+    }
+    .book-card .info-section{
+        padding: 0px 10px 20px;
+    }
+    .book-card .info-section .description p{
+        font-size: 1.3rem;
+    }
+}
